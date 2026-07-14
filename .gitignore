@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 .env
+# Netlify deploy output (if using netlify dev)
+.netlify
 
 # Editor directories and files
 .vscode/*
