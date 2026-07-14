@@ -1,5 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Header from './components/Header'
 import MobileBottomNav from './components/MobileBottomNav'
 import { useAuth } from './contexts/AuthContext'
@@ -77,6 +79,7 @@ function AppLayout() {
 export default function App() {
   return (
     <Suspense fallback={<LoadingFallback />}>
+      <ToastContainer position="top-right" autoClose={3000} theme="colored" />
       <Routes>
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin" element={<AdminLayout />}>
